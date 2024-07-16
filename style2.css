@@ -846,3 +846,98 @@ nav .togglebtn span {
         opacity: 1;
     }
 }
+#testimonials {
+    display: grid;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+    padding: 20px;
+    color: #333;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+.testimonial-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+.testimonial:nth-child(odd) {
+    background-color: #f9f9f9;
+}
+.testimonial {
+    background-color: #f2f2f2;
+    margin: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+#testimonials:hover.testimonial {
+    background-color: #ddd;
+}
+#testimonials.quote {
+    margin-bottom: 10px;
+}
+#testimonials.author {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+#testimonials.author p {
+    margin-top: 5px;
+}
+#testimonials.author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+#testimonials.author h3 {
+    color: #64ffda;
+    margin-top: 5px;
+}
+#testimonials.btn {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+#testimonials:hover {
+    background-color: #ddd;
+}
+
+@media screen and (max-width: 600px) {
+    #testimonials {
+        max-height: 200px;
+    }
+}
+@media screen and (max-width: 400px) {
+    #testimonials {
+        max-height: 150px;
+    }
+}
+@media screen and (max-width: 300px) {
+    #testimonials {
+        max-height: 100px;
+    }
+}
+@media screen and (max-width: 200px) {
+    #testimonials {
+        max-height: 50px;
+    }
+}
+@media screen and (max-width: 100px) {
+    #testimonials {
+        max-height: 25px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #testimonials {
+        max-height: 150px;
+    }
+}

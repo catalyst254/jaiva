@@ -315,17 +315,25 @@
 <body>
     <header>
         <div class="logo-container">
-            <img class="logo" src="logo.png">
+            <img class="logo" src="logo.png" alt="">
             <h1>Jaivac Fabricators</h1>
         </div>
-        <div class="text-container">
+        <div class="top-bar">
+            <nav>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for shoes...">
+                    <button type="submit"><i class="fa fa-search"></i></button>
+                </div>
+            </nav>
+        </div>
+        <nav class="main-nav">
             <ul>
                 <li><a href="/index.html">Home</a></li>
-                <li><a href="#about_us">About Us</a></li>
-                <li><a href="#ourservices">Our Services</a></li>
-                <li><a href="#contact_us">Contact Us</a></li>
+                <li><a href="/index.html#about_us">About Us</a></li>
+                <li><a href="/index.html#ourservices">Our Services</a></li>
+                <li><a href="/index.html#contact_us">Contact Us</a></li>
                 <li class="dropdown">
-                    <a href="#products" class="dropbtn">Our Products</a>
+                    <a href="/index.html#products" class="dropbtn">Our Products</a>
                     <ul class="dropdown-content">
                         <li><a href="/doors.html">Doors</a></li>
                         <li><a href="/windows.html">Windows</a></li>
@@ -337,8 +345,21 @@
                     </ul>
                 </li>
             </ul>
-        </div>
-        </div>
+            <div class="top-bar">
+                <nav>
+                    <ul class="nav-links">
+                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
+                        <li class="dropdown">
+                            <a href="account.html" class="dropbtn"><i class="fa fa-user"></i></a>
+                            <ul class="dropdown-content">
+                                <li><a href="/login.html">log-in</a></li>
+                                <li><a href="/Register.html">sign-up</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </nav>
     </header>
     <section>
         <div class="container">
