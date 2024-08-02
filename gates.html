@@ -7,512 +7,388 @@
     <title>Jaivac Fabricators: Gates</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: linear-gradient(to right, #f4f4f4, #dcdcdc);
-            color: #333;
-            background-image: url(abou.png);
-            background-attachment: fixed;
-        }
-
-        header {
-            background-color: #2c3e50;
-            align-items: center;
-            display: flex;
-            justify-content: space-between;
-            position: ;
-            z-index: 1000;
-            position: fixed;
-            width: 100%;
-            top: 0;
-        }
-
-        section {
-            padding-top: 100px;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            margin-bottom: 1px;
-            padding: 0.1em;
-        }
-
-        .text-container li {
-            margin-left: 20px;
-            font-weight: bolder;
-            display: inline-block;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .text-container a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            position: relative;
-        }
-
-        .text-container a::before {
-            content: "";
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #fff;
-            transition: width 0.3s;
-        }
-
-        .text-container a:hover::before {
-            width: 100%;
-        }
-
-        .text-container a:hover {
-            color: #ffd700;
-        }
-
-        .logo {
-            width: 60px;
-            height: 60px;
-            margin-left: 10px;
-            margin-bottom: 0.005px;
-            border-radius: 50%;
-            background-color: #f9f9f9;
-        }
-
-        h1 {
-            margin: 0;
-            margin-left: 100px;
-            font-family: 'Times New Roman', Times, serif;
-            color: #ffd700;
-        }
-
-        .dropdown {
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: #5f4848;
-            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-            z-index: 1;
-            border-radius: 10px;
-        }
-
-        .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #0c0c0c;
-            border-radius: 10px;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        h2,
-        h3 {
-            margin-bottom: 10px;
-            color: #0038f0;
-            /* Update font color */
-            font-family: 'Arial', sans-serif;
-            align-items: center;
-            text-align: center;
-        }
-
-        p {
-            margin: 10px 0;
-            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-            font-weight: bold;
-            text-align: center;
-        }
-
-        .beds {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f9f9f9;
-            padding: 20px;
-            border-radius: 10px;
-            width: 500px;
-            box-shadow: 5px 2px 5px rgba(0, 26, 255, 0.3);
-            text-align: center;
-            margin: 0 auto;
-            font-weight: bolder;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        .beds ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .beds li {
-            margin-bottom: 10px;
-            font-size: 16px;
-            line-height: 1;
-            align-items: center;
-            display: flex;
-        }
-
-        .beds li:before {
-            content: "\2713";
-            color: #0026ff;
-            margin-right: 10px;
-        }
-
-        .icon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .icon img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .icon img:hover {
-            transform: scale(1.1);
-            box-shadow: 8px 8px 8px #1c03ff;
-            background-color: #ffd700;
-
-        }
-
-        footer {
-            background: black;
-            color: #ffe600;
-            text-align: center;
-            padding: 1em 0;
-            border-top: 2px solid #555;
-            border-radius: 10px;
-            font-weight: bold;
-        }
-
-        .p {
-            font-size: large;
-            font-weight: lighter;
-            color: rgb(9, 235, 243);
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .p:hover {
-            color: gold;
-        }
-
-        .footer-content {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        }
-
-        @media screen {
-
-            /* For mobile phones: */
-            [class*="col-"] {
-                width: 100%;
-            }
-
-        }
-
-
-        .contact-info,
-        .quick-contact,
-        .important-links,
-        .social-links {
-            flex: 1;
-            padding: 0.5em;
-            text-align: center;
-            max-width: 300px;
-        }
-
-        .contact-info ul,
-        .important-links ul,
-        .social-links ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .important-links li,
-        .social-links li {
-            margin-bottom: 10px;
-        }
-
-
-        .contact-info li {
-            margin-bottom: 10px;
-            display: flex;
-        }
-
-        .quick-contact label,
-        .quick-contact textarea,
-        .quick-contact input {
-            margin-bottom: 10px;
-            width: 100%;
-            padding: 8px;
-            box-sizing: border-box;
-        }
-
-        .quick-contact button {
-            background-color: #fa04e5;
-            color: #fff;
-            border: none;
-            padding: 10px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .quick-contact button:hover {
-            background-color: #555;
-        }
-
-        .important-links a,
-        .social-links a {
-            text-decoration: none;
-            color: #fff;
-            transition: color 0.3s;
-            display: flex;
-            margin-left: 20px;
-        }
-
-        .important-links a:hover,
-        .social-links a:hover {
-            color: #555;
-        }
-
-        .image-container img {
-            width: 300px;
-            margin: 10px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .image-container img:hover {
-            transform: scale(1.05);
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
-        }
-    </style>
 </head>
+<style>
+    /* Modern, Space-Efficient CSS */
+
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --text-color: #333;
+  --bg-color: #f4f4f4;
+  --accent-color: #e74c3c;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--bg-color);
+}
+
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 8px 15px;
+  background-color: var(--secondary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--primary-color);
+}
+
+/* Compact Grid Layouts */
+.benefits, .category-grid, .features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+/* Flexible Image Sizing */
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Compact Sections */
+section {
+  margin-bottom: 40px;
+}
+
+/* Hero Section */
+.gates-hero {
+  background: var(--primary-color);
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin: -20px -20px 20px -20px;
+}
+
+/* Icon Styling */
+.fas {
+  color: var(--secondary-color);
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Product Slider */
+.product-slider, .testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.product, .testimonial {
+  flex: 0 0 auto;
+  width: 300px;
+  scroll-snap-align: start;
+}
+
+/* CTA Section */
+.cta {
+  background-color: var(--accent-color);
+  color: white;
+  padding: 30px;
+  text-align: center;
+  margin: 0 -20px -20px -20px;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .benefits, .category-grid, .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-slider, .testimonial-slider {
+    flex-direction: column;
+  }
+
+  .product, .testimonial {
+    width: 100%;
+  }
+}
+</style>
 
 <body>
     <header>
-        <div class="logo-container">
-            <img class="logo" src="logo.png" alt="">
-            <h1>Jaivac Fabricators</h1>
-        </div>
-        <div class="top-bar">
-            <nav>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for shoes...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Jaivac Fabricators Logo">
                 </div>
-            </nav>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#about_us">About Us</a></li>
-                <li><a href="/index.html#ourservices">Our Services</a></li>
-                <li><a href="/index.html#contact_us">Contact Us</a></li>
-                <li class="dropdown">
-                    <a href="/index.html#products" class="dropbtn">Our Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="/doors.html">Doors</a></li>
-                        <li><a href="/windows.html">Windows</a></li>
-                        <li><a href="/gates.html">Gates</a></li>
-                        <li><a href="/beds.html">Beds</a></li>
-                        <li><a href="/staircase.html">Staircase</a></li>
-                        <li><a href="/curtain.html">Curtain Rod</a></li>
-                        <li><a href="/chairs.html">Chairs</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="top-bar">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li class="dropdown">
-                            <a href="account.html" class="dropbtn"><i class="fa fa-user"></i></a>
-                            <ul class="dropdown-content">
-                                <li><a href="/login.html">log-in</a></li>
-                                <li><a href="/Register.html">sign-up</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <h1>Jaivac Fabricators</h1>
             </div>
-        </nav>
-    </header>
-    <section>
-        <div class="container">
-            <h2>Gates Collection</h2>
-            <p>Explore our range of premium gates, expertly crafted for durability, security, and style to enhance your
-                property's aesthetics and security.</p>
-        </div>
-
-        <!-- New Arrivals products here -->
-        <section class="new-arrivals">
-            <h2>New Arrivals</h2>
-            <div class="products">
-                <div class="product">
-                    <img src="/my.jpg" alt="Product 1">
-                    <h3>Gate Sneakers</h3>
-                    <p>$</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product">
-                    <img src="/gateb.png" alt="Product 2">
-                    <h3>Gate Heels</h3>
-                    <p>$</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product">
-                    <img src="gate.jpg" alt="Product 3">
-                    <h3>Gate Loafers</h3>
-                    <p>$</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product">
-                    <img src="/gateA.png.jpg" alt="Product 4">
-                    <h3>Gate Boots</h3>
-                    <p>$</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- featured products here -->
-        <section class="featured-products">
-            <h2>Featured Products</h2>
-            <div class="product-grid">
-                <div class="product-card">
-                    <img src="silver.jpg" alt="Featured Product 1">
-                    <h3>High-Top Sneakers</h3>
-                    <p class="price">$</p>
-                    <p class="description">Make a statement with our stylish high-top sneakers.</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="/2in.png.jpg" alt="Featured Product 2">
-                    <h3>Leather Boots</h3>
-                    <p class="price">$</p>
-                    <p class="description">Experience luxury with our premium leather boots.</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="/staircase2.png" alt="Featured Product 3">
-                    <h3>Canvas Shoes</h3>
-                    <p class="price">$</p>
-                    <p class="description">Casual yet trendy, our canvas shoes are perfect for any occasion.</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-                <div class="product-card">
-                    <img src="/win3.png.jpg" alt="Featured Product 4">
-                    <h3>Sport Sandals</h3>
-                    <p class="price">$</p>
-                    <p class="description">Stay comfortable and stylish with our sport sandals.</p>
-                    <a href="#" class="btn">Buy Now</a>
-                </div>
-            </div>
-        </section>
-
-        <h2>Why Choose Our Gates?</h2>
-        <div class="beds">
-            <ul>
-                <li>Skilled craftsmanship and durability</li>
-                <li>Variety of designs to suit different styles</li>
-                <li>Customization options available</li>
-                <li>High-quality, sturdy materials used</li>
-                <li>Affordable pricing for every budget</li>
-            </ul>
-        </div>
-        <div>
-            <h2>Security</h2>
-            <p>Our gates are built with high-quality materials and sturdy locks to ensure maximum security for your
-                property.</p>
-        </div>
-        <div>
-            <h3>Contact Us</h3>
-            <p>Ready to order? Get in touch to discuss your needs and place your order. Our team is here to assist you.
-            </p>
-            <p>click the icon below;</p>
-            <div class="icon"> <a href="contact us.html"><img src="cal.png" alt=""></a></div>
-        </div>
-    </section>
-
-    </div>
-    <footer>
-        <p class="p">Contact us today to discuss your welding and fabrication needs. We are here to turn your ideas into
-            reality.</p>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Are you looking for high-quality welders and fabricators for your project?</p>
+            <nav class="main-nav" id="mainNav">
                 <ul>
-                    <li><i class="fas fa-envelope"></i> Email: info@jaivacfabricators.com</li>
-                    <li><i class="fas fa-phone"></i> Phone: +(254) 110848885</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Address: Metal Street, Kiritiri</li>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#about_us">About Us</a></li>
+                    <li><a href="/index.html#ourservices">Our Services</a></li>
+                    <li><a href="/index.html#contact_us">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="/index.html#products" class="dropbtn">Our Products</a>
+                        <div class="dropdown-content">
+                            <a href="/doors.html">Doors</a>
+                            <a href="/windows.html">Windows</a>
+                            <a href="/gates.html">Gates</a>
+                            <a href="/beds.html">Beds</a>
+                            <a href="/staircase.html">Staircase</a>
+                            <a href="/curtain.html">Curtain Rod</a>
+                            <a href="/chairs.html">Chairs</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </header>
+    <main>
+        <section class="gates-hero">
+            <h1>Secure in Style: Our Gate Collection</h1>
+            <p>Discover the perfect blend of security, functionality, and aesthetic appeal in our custom-crafted gates.</p>
+        </section>
+
+        <section class="gates-intro">
+            <h2>Why Choose Jaivac Gates?</h2>
+            <div class="benefits">
+                <div class="benefit">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Enhanced Security</h3>
+                    <p>Our gates are designed with your safety in mind, featuring robust construction and advanced locking mechanisms.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-palette"></i>
+                    <h3>Customizable Designs</h3>
+                    <p>From classic to contemporary, we offer a wide range of styles to complement your property's aesthetic.</p>
+                </div>
+                <div class="benefit">
+                    <i class="fas fa-cogs"></i>
+                    <h3>Durable Construction</h3>
+                    <p>Built to withstand the elements and daily use, our gates are an investment in long-lasting quality.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="gate-categories">
+            <h2>Our Gate Styles</h2>
+            <div class="category-grid">
+                <div class="category">
+                    <img src="g" alt="Residential Gates">
+                    <h3>Residential Gates</h3>
+                    <p>Enhance your home's curb appeal and security.</p>
+                </div>
+                <div class="category">
+                    <img src="gateA.png.jpg" alt="Commercial Gates">
+                    <h3>Commercial Gates</h3>
+                    <p>Robust solutions for businesses and industrial properties.</p>
+                </div>
+                <div class="category">
+                    <img src="gateb.png" alt="Automatic Gates">
+                    <h3>Automatic Gates</h3>
+                    <p>Convenience meets security with our motorized options.</p>
+                </div>
+                <div class="category">
+                    <img src="gates.html" alt="Decorative Gates">
+                    <h3>Decorative Gates</h3>
+                    <p>Artistic designs that make a statement.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="featured-products">
+            <h2>Featured Gates</h2>
+            <div class="product-slider">
+                <div class="product">
+                    <img src="my.jpg" alt="Modern Sliding Gate">
+                    <h3>Modern Sliding Gate</h3>
+                    <p>Sleek design with smooth operation for contemporary homes.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="product">
+                    <img src="gateA.png.jpg" alt="Ornate Wrought Iron Gate">
+                    <h3>Ornate Wrought Iron</h3>
+                    <p>Intricate designs for a touch of classic elegance.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+                <div class="product">
+                    <img src="m.jpg" alt="Heavy-Duty Industrial Gate">
+                    <h3>Heavy-Duty Industrial</h3>
+                    <p>Robust construction for maximum security in commercial settings.</p>
+                    <a href="#" class="btn">Learn More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-orders">
+            <h2>Custom Gate Orders</h2>
+            <p>Looking for a unique gate design? We specialize in creating custom gates tailored to your specific requirements and property layout.</p>
+            <a href="#" class="btn">Start Your Custom Order</a>
+        </section>
+
+        <section class="gate-features">
+            <h2>Advanced Gate Features</h2>
+            <div class="features-grid">
+                <div class="feature">
+                    <i class="fas fa-lock"></i>
+                    <h3>Advanced Locking Systems</h3>
+                    <p>State-of-the-art security features to keep your property safe.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h3>Remote Control Access</h3>
+                    <p>Convenient operation from the comfort of your vehicle.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-video"></i>
+                    <h3>Integrated Camera Systems</h3>
+                    <p>Optional surveillance integration for enhanced security.</p>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-sun"></i>
+                    <h3>Weather-Resistant Finishes</h3>
+                    <p>Durable coatings to protect against rust and corrosion.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <p>"The automatic gate Jaivac installed has transformed our property. It's both beautiful and incredibly secure!"</p>
+                    - Robert L.
+                </div>
+                <div class="testimonial">
+                    <p>"Jaivac's attention to detail on our custom gate design was impressive. It's exactly what we envisioned."</p>
+                    - Emily W.
+                </div>
+            </div>
+        </section>
+
+        <section class="cta">
+            <h2>Ready to Enhance Your Property's Security and Style?</h2>
+            <p>Explore our gate collection or start your custom order today.</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn">View Catalog</a>
+                <a href="#" class="btn">Request Quote</a>
+            </div>
+        </section>
+    </main>
+    <footer class="metalwork-footer">
+        <div class="footer-container">
+            <div class="footer-section brand-section">
+                <h2 class="footer-logo">Jaivac Fabricators</h2>
+                <p class="tagline">Forging Excellence Since 2005</p>
+                <div class="footer-divider"></div>
+            </div>
+            
+            <div class="footer-section contact-info">
+                <h3>Reach Out</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@jaivacfabricators.com</li>
+                    <li><i class="fas fa-phone"></i> +(254) 110848885</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Metal Street, Kiritiri</li>
                 </ul>
             </div>
-
-            <div class="quick-contact">
-                <h3>Quick Contact</h3>
-                <form class="form" id="contactForm" onsubmit="return ValidateForm()">
-                    <label for="email">Your email:</label>
-                    <input type="email" id="email" name="user_email" required placeholder="example@domain.com">
-                    <label for="message">Message:</label>
-                    <textarea name="user_message" id="user_message" rows="4" required></textarea>
-                    <button type="submit" form="contactForm" onclick="SubmitForm()">Send Message</button>
+    
+            <div class="footer-section quick-contact">
+                <h3>Spark a Conversation</h3>
+                <form id="contactForm" action="process_form.php" method="post" onsubmit="return ValidateForm()">
+                    <input type="email" id="email" name="user_email" required placeholder="Your email">
+                    <textarea name="user_message" id="user_message" rows="3" required placeholder="Your message"></textarea>
+                    <button type="submit" onclick="SubmitForm()">
+                        <i class="fas fa-fire"></i> Ignite Your Project
+                    </button>
                 </form>
             </div>
-
-
-            <div class="footer-content">
-                <div class="important-links">
-                    <h3>Important Links</h3>
-                    <ul>
-                        <li><a href="http://127.0.0.1:5501/beds.html">Beds</a></li>
-                        <li><a href="http://127.0.0.1:5501/doors.html">Doors</a></li>
-                        <li><a href="http://127.0.0.1:5501/gates.html">Gates</a></li>
-                        <li><a href="http://127.0.0.1:5501/chairs.html">Chairs</a></li>
-                        <li><a href="http://127.0.0.1:5501/windows.html">Windows</a></li>
-                        <li><a href="staircase.html">Staircase</a></li>
-                        <li><a href="curtain.html">Curtain Rods</a></li>
-                    </ul>
-                </div>
-
-                <div class="social-links">
-                    <h3>Connect with Us</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/Brian paul Gito " target="_blank"><i
-                                    class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.twitter.com/@julius29511" target="_blank"><i
-                                    class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://wa.me/+254783845747" target="_blank"><i class="fab fa-whatsapp"></i>
-                                WhatsApp</a></li>
-                    </ul>
-                </div>
+    
+            <div class="footer-section important-links">
+                <h3>Our Craftsmanship</h3>
+                <ul>
+                    <li><a href="beds.html"><i class="fas fa-bed"></i> Beds</a></li>
+                    <li><a href="doors.html"><i class="fas fa-door-open"></i> Steels</a></li>
+                    <li><a href="gates.html"><i class="fas fa-archway"></i> Gates</a></li>
+                    <li><a href="chairs.html"><i class="fas fa-chair"></i> Chairs</a></li>
+                    <li><a href="windows.html"><i class="fas fa-window-maximize"></i> Windows</a></li>
+                    <li><a href="staircase.html"><i class="fas fa-stairs"></i> Staircases</a></li>
+                    <li><a href="curtain.html"><i class="fas fa-grip-lines"></i> Curtain Rods</a></li>
+                </ul>
             </div>
+    
+            <div class="footer-section social-links">
+                <h3>Join Our Network</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Brian paul Gito" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.twitter.com/@julius29511" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://wa.me/+254783845747" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Welding visions into reality since 2005. © 2024 Jaivac Fabricators. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Hide menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!header.contains(event.target) && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+            }
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
 </body>
 
 </html>

@@ -314,52 +314,40 @@
 
 <body>
     <header>
-        <div class="logo-container">
-            <img class="logo" src="logo.png" alt="">
-            <h1>Jaivac Fabricators</h1>
-        </div>
-        <div class="top-bar">
-            <nav>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for shoes...">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Jaivac Fabricators Logo">
                 </div>
-            </nav>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#about_us">About Us</a></li>
-                <li><a href="/index.html#ourservices">Our Services</a></li>
-                <li><a href="/index.html#contact_us">Contact Us</a></li>
-                <li class="dropdown">
-                    <a href="/index.html#products" class="dropbtn">Our Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="/doors.html">Doors</a></li>
-                        <li><a href="/windows.html">Windows</a></li>
-                        <li><a href="/gates.html">Gates</a></li>
-                        <li><a href="/beds.html">Beds</a></li>
-                        <li><a href="/staircase.html">Staircase</a></li>
-                        <li><a href="/curtain.html">Curtain Rod</a></li>
-                        <li><a href="/chairs.html">Chairs</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="top-bar">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li class="dropdown">
-                            <a href="account.html" class="dropbtn"><i class="fa fa-user"></i></a>
-                            <ul class="dropdown-content">
-                                <li><a href="/login.html">log-in</a></li>
-                                <li><a href="/Register.html">sign-up</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <h1>Jaivac Fabricators</h1>
             </div>
-        </nav>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#about_us">About Us</a></li>
+                    <li><a href="/index.html#ourservices">Our Services</a></li>
+                    <li><a href="/index.html#contact_us">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="/index.html#products" class="dropbtn">Our Products</a>
+                        <div class="dropdown-content">
+                            <a href="/doors.html">Doors</a>
+                            <a href="/windows.html">Windows</a>
+                            <a href="/gates.html">Gates</a>
+                            <a href="/beds.html">Beds</a>
+                            <a href="/staircase.html">Staircase</a>
+                            <a href="/curtain.html">Curtain Rod</a>
+                            <a href="/chairs.html">Chairs</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
     <section>
         <div class="container">
@@ -456,60 +444,82 @@
     </section>
 
     </div>
-    <footer>
-        <p class="p">Contact us today to discuss your welding and fabrication needs. We are here to turn your ideas into
-            reality.</p>
-        <div class="footer-content">
-            <div class="contact-info">
-                <h3>Contact Us</h3>
-                <p>Are you looking for high-quality welders and fabricators for your project?</p>
+    <footer class="metalwork-footer">
+        <div class="footer-container">
+            <div class="footer-section brand-section">
+                <h2 class="footer-logo">Jaivac Fabricators</h2>
+                <p class="tagline">Forging Excellence Since 2005</p>
+                <div class="footer-divider"></div>
+            </div>
+            
+            <div class="footer-section contact-info">
+                <h3>Reach Out</h3>
                 <ul>
-                    <li><i class="fas fa-envelope"></i> Email: info@jaivacfabricators.com</li>
-                    <li><i class="fas fa-phone"></i> Phone: +(254) 110848885</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Address: Metal Street, Kiritiri</li>
+                    <li><i class="fas fa-envelope"></i> info@jaivacfabricators.com</li>
+                    <li><i class="fas fa-phone"></i> +(254) 110848885</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Metal Street, Kiritiri</li>
                 </ul>
             </div>
-
-            <div class="quick-contact">
-                <h3>Quick Contact</h3>
-                <form class="form" id="contactForm" onsubmit="return ValidateForm()">
-                    <label for="email">Your email:</label>
-                    <input type="email" id="email" name="user_email" required placeholder="example@domain.com">
-                    <label for="message">Message:</label>
-                    <textarea name="user_message" id="user_message" rows="4" required></textarea>
-                    <button type="submit" form="contactForm" onclick="SubmitForm()">Send Message</button>
+    
+            <div class="footer-section quick-contact">
+                <h3>Spark a Conversation</h3>
+                <form id="contactForm" action="process_form.php" method="post" onsubmit="return ValidateForm()">
+                    <input type="email" id="email" name="user_email" required placeholder="Your email">
+                    <textarea name="user_message" id="user_message" rows="3" required placeholder="Your message"></textarea>
+                    <button type="submit" onclick="SubmitForm()">
+                        <i class="fas fa-fire"></i> Ignite Your Project
+                    </button>
                 </form>
             </div>
-
-
-            <div class="footer-content">
-                <div class="important-links">
-                    <h3>Important Links</h3>
-                    <ul>
-                        <li><a href="http://127.0.0.1:5501/beds.html">Beds</a></li>
-                        <li><a href="http://127.0.0.1:5501/doors.html">Doors</a></li>
-                        <li><a href="http://127.0.0.1:5501/gates.html">Gates</a></li>
-                        <li><a href="http://127.0.0.1:5501/chairs.html">Chairs</a></li>
-                        <li><a href="http://127.0.0.1:5501/windows.html">Windows</a></li>
-                        <li><a href="staircase.html">Staircase</a></li>
-                        <li><a href="curtain.html">Curtain Rods</a></li>
-                    </ul>
-                </div>
-
-                <div class="social-links">
-                    <h3>Connect with Us</h3>
-                    <ul>
-                        <li><a href="https://www.facebook.com/Brian paul Gito " target="_blank"><i
-                                    class="fab fa-facebook"></i> Facebook</a></li>
-                        <li><a href="https://www.twitter.com/@julius29511" target="_blank"><i
-                                    class="fab fa-twitter"></i> Twitter</a></li>
-                        <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                        <li><a href="https://wa.me/+254783845747" target="_blank"><i class="fab fa-whatsapp"></i>
-                                WhatsApp</a></li>
-                    </ul>
-                </div>
+    
+            <div class="footer-section important-links">
+                <h3>Our Craftsmanship</h3>
+                <ul>
+                    <li><a href="beds.html"><i class="fas fa-bed"></i> Beds</a></li>
+                    <li><a href="doors.html"><i class="fas fa-door-open"></i> Steels</a></li>
+                    <li><a href="gates.html"><i class="fas fa-archway"></i> Gates</a></li>
+                    <li><a href="chairs.html"><i class="fas fa-chair"></i> Chairs</a></li>
+                    <li><a href="windows.html"><i class="fas fa-window-maximize"></i> Windows</a></li>
+                    <li><a href="staircase.html"><i class="fas fa-stairs"></i> Staircases</a></li>
+                    <li><a href="curtain.html"><i class="fas fa-grip-lines"></i> Curtain Rods</a></li>
+                </ul>
             </div>
+    
+            <div class="footer-section social-links">
+                <h3>Join Our Network</h3>
+                <ul>
+                    <li><a href="https://www.facebook.com/Brian paul Gito" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                    <li><a href="https://www.twitter.com/@julius29511" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="https://wa.me/+254783845747" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>Welding visions into reality since 2005. © 2024 Jaivac Fabricators. All rights reserved.</p>
+        </div>
     </footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
+
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Hide menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!header.contains(event.target) && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+            }
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+    </script>
 </body>
 
 </html>

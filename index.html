@@ -11,52 +11,40 @@
 
 <body>
     <header>
-        <div class="logo-container">
-            <img class="logo" src="logo.png" alt="">
-            <h1>Jaivac Fabricators</h1>
-        </div>
-        <div class="top-bar">
-            <nav>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for ......">
-                    <button type="submit"><i class="fa fa-search"></i></button>
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="logo.png" alt="Jaivac Fabricators Logo">
                 </div>
-            </nav>
-        </div>
-        <nav class="main-nav">
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="/index.html#about_us">About Us</a></li>
-                <li><a href="/index.html#ourservices">Our Services</a></li>
-                <li><a href="/index.html#contact_us">Contact Us</a></li>
-                <li class="dropdown">
-                    <a href="/index.html#products" class="dropbtn">Our Products</a>
-                    <ul class="dropdown-content">
-                        <li><a href="/doors.html">Doors</a></li>
-                        <li><a href="/windows.html">Windows</a></li>
-                        <li><a href="/gates.html">Gates</a></li>
-                        <li><a href="/beds.html">Beds</a></li>
-                        <li><a href="/staircase.html">Staircase</a></li>
-                        <li><a href="/curtain.html">Curtain Rod</a></li>
-                        <li><a href="/chairs.html">Chairs</a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="top-bar">
-                <nav>
-                    <ul class="nav-links">
-                        <li><a href="#"><i class="fa fa-shopping-cart"></i></a></li>
-                        <li class="dropdown">
-                            <a href="account.html" class="dropbtn"><i class="fa fa-user"></i></a>
-                            <ul class="dropdown-content">
-                                <li><a href="/login.html">log-in</a></li>
-                                <li><a href="/Register.html">sign-up</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </nav>
+                <h1>Jaivac Fabricators</h1>
             </div>
-        </nav>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/index.html#about_us">About Us</a></li>
+                    <li><a href="/index.html#ourservices">Our Services</a></li>
+                    <li><a href="/index.html#contact_us">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="/index.html#products" class="dropbtn">Our Products</a>
+                        <div class="dropdown-content">
+                            <a href="/doors.html">Doors</a>
+                            <a href="/windows.html">Windows</a>
+                            <a href="/gates.html">Gates</a>
+                            <a href="/beds.html">Beds</a>
+                            <a href="/staircase.html">Staircase</a>
+                            <a href="/curtain.html">Curtain Rod</a>
+                            <a href="/chairs.html">Chairs</a>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+            <div class="menu-toggle" id="menuToggle">☰</div>
+        </div>
+        <div class="wave-shape">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V120H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
     </header>
 
     <main>
@@ -97,7 +85,7 @@
             </div>
 
             <div class="slide">
-                <img src="dining.jpg" alt="Custom-made dining set" loading="lazy">
+                <img src="choose.png" alt="Custom-made dining set" loading="lazy">
                 <div class="slide-content">
                     <h2>Endless Possibilities</h2>
                     <p>Jaivac Fabricators: Creative welding and precise metal crafting. Excellence in fabrication with
@@ -155,7 +143,7 @@
             </div>
         </section>
 
-        <section id="services" class="services">
+        <section id="ourservices" class="services">
             <h2 class="headings">Our Services</h2><br>
             <p>Jaivac Fabricators provides a range of welding services to meet your industrial needs. Our skilled team
                 ensures top-notch quality and precision in every project.</p>
@@ -165,11 +153,13 @@
                 <li><i class="fas fa-pipe"></i> Pipe Welding</li>
                 <li><i class="fas fa-wrench"></i> Welding Repairs</li>
             </ul>
-            <a href="/index.html#ourservices" class="btn">Learn More</a>
+            <div id="load">
+                <button>Learn More </button>
+            </div>
         </section>
 
         <!--Our services section-->
-        <section id="ourservices">
+        <section>
             <div class="service-container">
                 <div class="service">
                     <img src="custom.jpg" />
@@ -184,11 +174,13 @@
                         and industrial facilities. Our expertise ensures the strength and stability of structures.</p>
                 </div>
                 <div class="service">
+                    <img src="onsite.png" alt="">
                     <h3>On-Site Welding</h3>
                     <p>Bringing welding services directly to your location. Our on-site welding team is equipped to
                         handle various tasks, ensuring convenience and efficiency for our clients.</p>
                 </div>
                 <div class="service">
+                    <img src="maintanance.png" alt="">
                     <h3>Metal Repairs and Maintenance</h3>
                     <p>Specializing in the repair and maintenance of metal structures and equipment. Trust us to keep
                         your investments in optimal condition.</p>
@@ -196,43 +188,78 @@
             </div>
         </section>
 
-        <!-- About page content -->
         <section class="about-section" id="about_us">
-            <h2 class="headings">About Us</h2>
-            <div id="about_us">
-                <div class="alamy">
-                    <img class="img" src="alamy.png" alt="Jaivac Fabricators Welding">
-                    <div class="alamy-container">
-                        <h3>Jaivac Fabricators: Welding Excellence</h3>
-                        <ul>
-                            <li>Expert welding and fabrication services</li>
-                            <li>Skilled team with cutting-edge technology</li>
-                            <li>Transforming your vision into reality</li>
-                        </ul>
+            <h2 class="section-title">Crafting Excellence in Metal</h2>
+            
+            <div class="company-intro">
+                <div class="intro-image">
+                    <img src="alamy.png" alt="Jaivac Fabricators Welding">
+                </div>
+                <div class="intro-content">
+                    <h3>Jaivac Fabricators: Where Vision Meets Precision</h3>
+                    <p>Since 2005, we've been transforming raw metal into architectural marvels and functional masterpieces. Our journey is one of passion, innovation, and unwavering commitment to quality.</p>
+                    <ul>
+                        <li>Cutting-edge welding technology</li>
+                        <li>Expert craftsmen with decades of experience</li>
+                        <li>Customized solutions for every project</li>
+                        <li>Commitment to sustainability and eco-friendly practices</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="company-values">
+                <h3 class="values-title">Our Guiding Principles</h3>
+                <div class="values-grid">
+                    <div class="value-card">
+                        <div class="card-image" style="background-image: url('silver.jpg')"></div>
+                        <div class="card-content">
+                            <h4>Our Mission</h4>
+                            <p>To elevate the art of welding, delivering unparalleled quality that stands the test of time. We're not just welding metal; we're forging lasting relationships and building dreams.</p>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="card-image" style="background-image: url('shutter.png')"></div>
+                        <div class="card-content">
+                            <h4>Our Vision</h4>
+                            <p>To be the catalyst for innovation in metal fabrication, pushing boundaries and redefining what's possible. We envision a future where our creations inspire and transform spaces across the globe.</p>
+                        </div>
+                    </div>
+                    <div class="value-card">
+                        <div class="card-image" style="background-image: url('back.png')"></div>
+                        <div class="card-content">
+                            <h4>Our Ethos</h4>
+                            <p>"Precision in every weld, excellence in every detail." This mantra drives us to perfection, ensuring that each project, big or small, receives our undivided attention and expertise.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <h2 class="h2">Who We Are</h2>
-            <div class="image-container">
-                <div class="image-box">
-                    <img src="silver.jpg" alt="Our Mission">
-                    <h4>Our Mission</h4>
-                    <p>Deliver superior welding solutions that exceed expectations, building lasting relationships
-                        through trust and satisfaction.</p>
-                </div>
-                <div class="image-box">
-                    <img src="shutter.png" alt="Our Vision">
-                    <h4>Our Vision</h4>
-                    <p>Innovate and create, pushing the boundaries of welding excellence. Your vision is our
-                        inspiration.</p>
-                </div>
-                <div class="image-box">
-                    <img src="back.png" alt="Our Motto">
-                    <h4>Our Motto</h4>
-                    <p>Commitment to quality and precision – transforming metal into masterpieces with every weld.</p>
+        
+            <div class="our-process">
+                <h3 class="process-title">Our Craft: From Concept to Creation</h3>
+                <div class="process-steps">
+                    <div class="step">
+                        <div class="step-icon">1</div>
+                        <h4>Collaborative Design</h4>
+                        <p>We work closely with you to understand your vision and refine the concept.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">2</div>
+                        <h4>Precision Planning</h4>
+                        <p>Our engineers meticulously plan every detail to ensure flawless execution.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">3</div>
+                        <h4>Expert Fabrication</h4>
+                        <p>Our skilled artisans bring the design to life with state-of-the-art techniques.</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-icon">4</div>
+                        <h4>Quality Assurance</h4>
+                        <p>Rigorous testing ensures every piece meets our exacting standards.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
             <div class="why-choose">
                 <h2>Why Choose Jaivac Fabricators?</h2>
@@ -244,7 +271,6 @@
                     <li><strong>Timely Delivery:</strong> Commitment to project deadlines</li>
                 </ul>
             </div>
-        </section>
 
         <div class="box">
             <section class="purpose">
@@ -351,6 +377,7 @@
 
         <section id="contact_us">
             <h2 class="headings">Contact Us</h2>
+        <div class="company-intro">
             <div class="info">
                 <h2>Business Information</h2>
                 <p><i class="fas fa-map-marker-alt icon"></i><strong>Address:</strong> 11736813 Kiritiri.</p>
@@ -380,6 +407,7 @@
                     <button class="btn" type="submit">Submit</button>
                 </form>
             </div>
+        </div>
         </section>
     </main>
     <script>
@@ -415,58 +443,84 @@
         })
     </script>
 
-    <footer>
-        <p class="p">Contact us today to discuss your welding and fabrication needs. We are here to turn
-            your ideas into reality.</p>
-        <div class="footer-content">
-            <div class="contact-infor">
-                <h3>Contact Us</h3>
-                <p>Are you looking for high-quality welders and fabricators for your project?</p>
-                <ul>
-                    <li><i class="fas fa-envelope"></i> Email: info@jaivacfabricators.com</li>
-                    <li><i class="fas fa-phone"></i> Phone: +(254) 110848885</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Address: Metal Street, Kiritiri</li>
-                </ul>
-            </div>
+<footer class="metalwork-footer">
+    <div class="footer-container">
+        <div class="footer-section brand-section">
+            <h2 class="footer-logo">Jaivac Fabricators</h2>
+            <p class="tagline">Forging Excellence Since 2005</p>
+            <div class="footer-divider"></div>
+        </div>
+        
+        <div class="footer-section contact-info">
+            <h3>Reach Out</h3>
+            <ul>
+                <li><i class="fas fa-envelope"></i> info@jaivacfabricators.com</li>
+                <li><i class="fas fa-phone"></i> +(254) 110848885</li>
+                <li><i class="fas fa-map-marker-alt"></i> Metal Street, Kiritiri</li>
+            </ul>
+        </div>
 
-            <div class="quick-contact">
-                <h3>Quick Contact</h3>
-                <form class="form" id="contactForm" action="process_form.php" method="post"
-                    onsubmit="return ValidateForm()">
-                    <label for="email">Your email:</label>
-                    <input type="email" id="email" name="user_email" required placeholder="example@domain.com">
-                    <label for="message">Message:</label>
-                    <textarea name="user_message" id="user_message" rows="4" required></textarea>
-                    <button type="submit" form="contactForm" onclick="SubmitForm()">Send Message</button>
-                </form>
-            </div>
+        <div class="footer-section quick-contact">
+            <h3>Spark a Conversation</h3>
+            <form id="contactForm" action="process_form.php" method="post" onsubmit="return ValidateForm()">
+                <input type="email" id="email" name="user_email" required placeholder="Your email">
+                <textarea name="user_message" id="user_message" rows="3" required placeholder="Your message"></textarea>
+                <button type="submit" onclick="SubmitForm()">
+                    <i class="fas fa-fire"></i> Ignite Your Project
+                </button>
+            </form>
+        </div>
 
+        <div class="footer-section important-links">
+            <h3>Our Craftsmanship</h3>
+            <ul>
+                <li><a href="beds.html"><i class="fas fa-bed"></i> Beds</a></li>
+                <li><a href="doors.html"><i class="fas fa-door-open"></i> Steels</a></li>
+                <li><a href="gates.html"><i class="fas fa-archway"></i> Gates</a></li>
+                <li><a href="chairs.html"><i class="fas fa-chair"></i> Chairs</a></li>
+                <li><a href="windows.html"><i class="fas fa-window-maximize"></i> Windows</a></li>
+                <li><a href="staircase.html"><i class="fas fa-stairs"></i> Staircases</a></li>
+                <li><a href="curtain.html"><i class="fas fa-grip-lines"></i> Curtain Rods</a></li>
+            </ul>
+        </div>
 
-            <div class="footer-cont">
-                <div class="important-link">
-                    <h3>Important Links</h3>
-                    <ul>
-                        <li><a href="beds.html">Beds</a></li>
-                        <li><a href="doors.html">Doors</a></li>
-                        <li><a href="gates.html">Gates</a></li>
-                        <li><a href="chairs.html">Chairs</a></li>
-                        <li><a href="windows.html">Windows</a></li>
-                        <li><a href="staircase.html">Staircase</a></li>
-                        <li><a href="curtain.html">Curtain Rods</a></li>
-                    </ul>
-                </div>
+        <div class="footer-section social-links">
+            <h3>Join Our Network</h3>
+            <ul>
+                <li><a href="https://www.facebook.com/Brian paul Gito" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
+                <li><a href="https://www.twitter.com/@julius29511" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://wa.me/+254783845747" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>Welding visions into reality since 2005. © 2024 Jaivac Fabricators. All rights reserved.</p>
+        <h3>Designed by <span>HighTech Quantum</span></h3>
+    </div>
+</footer>
+    <script>
+        const menuToggle = document.getElementById('menuToggle');
+        const mainNav = document.getElementById('mainNav');
 
-                <div class="social-link">
-                    <h3>Connect with Us</h3>
-                    <ul>
-                      <li><a href="https://www.facebook.com/Brian paul Gito" target="_blank"><i class="fab fa-facebook"></i> Facebook</a></li>
-                      <li><a href="https://www.twitter.com/@julius29511" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
-                      <li><a href="#" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
-                      <li><a href="https://wa.me/+254783845747" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
-                    </ul>
-                  </div>
-            </div>
-    </footer>
+        menuToggle.addEventListener('click', () => {
+            mainNav.classList.toggle('active');
+        });
+
+        // Hide menu when clicking outside
+        document.addEventListener('click', (event) => {
+            if (!header.contains(event.target) && mainNav.classList.contains('active')) {
+                mainNav.classList.remove('active');
+            }
+        });
+
+        // Sticky header
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            header.classList.toggle('sticky', window.scrollY > 0);
+        });
+        
+    </script>
 
 </body>
 
